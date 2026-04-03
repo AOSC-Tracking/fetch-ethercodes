@@ -119,7 +119,7 @@ def code_key(val):
         ABCDEF -> ab:cd:ef
     """
     if len(val) == 6:
-        return ':'.join((map(hexstr, map(hex, (val[:2], val[2:4], val[4:])))))
+        return ':'.join((val[:2], val[2:4], val[4:]))
 
 
 def fetch_infile(infile):
